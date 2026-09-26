@@ -5,6 +5,7 @@ import AboutMe from "./sections/AboutMe.tsx"
 import Projects from "./sections/Projects.tsx"
 import Skills from "./sections/Skills.tsx"
 import Education from "./sections/Education.tsx"
+import Contact from "./sections/Contact.tsx"
 
 const App = () => {
 
@@ -17,6 +18,7 @@ const App = () => {
         <Projects/>
         <Skills/>
         <Education/>
+        <Contact/>
       </div>
     </>
   )

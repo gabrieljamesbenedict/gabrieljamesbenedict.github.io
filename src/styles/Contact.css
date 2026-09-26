@@ -1,0 +1,87 @@
+.contact {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.contact__container {
+  width: 100%;
+  margin: 0 10rem;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.contact__title {
+  font-family: 'Monaspace Argon', monospace;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #f8fafc;
+  text-align: center;
+}
+
+.contact__description {
+  font-family: 'Monaspace Neon', monospace;
+  font-size: 1.1rem;
+  color: #cbd5e1;
+  margin-bottom: 3rem;
+  text-align: center;
+}
+
+.contact__links {
+  display: flex;
+  gap: 1.5rem;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.contact__link {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 12px;
+  padding: 1rem 2rem;
+  font-family: 'Monaspace Xenon', monospace;
+  font-size: 1rem;
+  color: #ffffff;
+  text-decoration: none;
+  transition: transform 200ms ease, border-color 200ms ease, background-color 200ms ease;
+}
+
+.contact__link:hover {
+  transform: translateY(-5px);
+  background-color: rgba(139, 92, 246, 0.15);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.contact__icon {
+  width: 1.5rem;
+  height: 1.5rem;
+  object-fit: contain;
+}
+
+@media (max-width: 1200px) {
+  .contact__container {
+    margin: 0 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .contact__container {
+    margin: 0 2rem;
+  }
+  .contact__links {
+    flex-direction: column;
+    width: 100%;
+    max-width: 300px;
+  }
+  .contact__link {
+    justify-content: center;
+  }
+}
