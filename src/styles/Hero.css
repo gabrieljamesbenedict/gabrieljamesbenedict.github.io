@@ -1,0 +1,74 @@
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 80vh;
+  padding: 0 2.5rem;
+  text-align: center;
+}
+
+.hero__content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5rem;
+  max-width: 800px;
+}
+
+.hero__title {
+  font-family: 'Monaspace Argon', monospace;
+  font-size: 4rem;
+  font-weight: 700;
+  line-height: 1.2;
+}
+
+.hero__subtitle {
+  font-family: 'Monaspace Neon', monospace;
+  font-size: 1.5rem;
+  color: #cbd5e1;
+}
+
+.hero__actions {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.hero__btn {
+  padding: 0.75rem 2rem;
+  border-radius: 9999px;
+  text-decoration: none;
+  font-family: 'Monaspace Krypton', monospace;
+  font-weight: 500;
+  transition: all 200ms ease;
+}
+
+.hero__btn--primary {
+  background-color: rgba(139, 92, 246, 0.3);
+  color: #ffffff;
+  border: 1px solid rgba(139, 92, 246, 0.5);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  &:hover {
+    background-color: rgba(139, 92, 246, 0.6);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(139, 92, 246, 0.4);
+  }
+}
+
+.hero__btn--secondary {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #cbd5e1;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+
+  &:hover {
+    color: #ffffff;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-color: rgba(255, 255, 255, 0.3);
+    transform: translateY(-2px);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.1);
+  }
+}
