@@ -1,5 +1,5 @@
 import "../styles/Projects.css";
-import { ProjectModel, fetchProjects } from "../data/ProjectMode";
+import { ProjectModel, fetchProjects } from "../data/ProjectData";
 
 const Projects = ({ projects }: { projects: ProjectModel[] }) => {
   return (

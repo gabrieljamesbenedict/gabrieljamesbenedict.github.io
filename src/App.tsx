@@ -3,7 +3,8 @@ import Header from "./sections/Header.tsx"
 import Hero from "./sections/Hero.tsx"
 import AboutMe from "./sections/AboutMe.tsx"
 import Projects from "./sections/Projects.tsx"
-import { ProjectModel } from "./data/ProjectMode.ts"
+import Skills from "./sections/Skills.tsx"
+import { ProjectModel } from "./data/ProjectData.ts"
 
 const App = () => {
 
@@ -65,6 +66,7 @@ const App = () => {
         <Hero/>
         <AboutMe/>
         <Projects projects={sampleProjects}/>
+        <Skills/>
       </div>
     </>
   )
