@@ -27,11 +27,11 @@ const Projects = () => {
                         </div>
                     ))}
                 </div>
-                <a href="/projects">
+                {/* <a href="/projects">
                     <div className="projects__more-projects-btn">
                         More Projects
                     </div>
-                </a>
+                </a> */}
             </div>
         </section>
     );
