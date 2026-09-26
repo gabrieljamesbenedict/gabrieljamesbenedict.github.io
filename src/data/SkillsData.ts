@@ -34,7 +34,8 @@ export const skillsData: Record<string, string[][]> = {
     ["Git", "Competent"],
     ["Docker", "Competent"],
     ["Postman", "Experienced"],
-    ["Android Studio", "Experienced"]
+    ["Android Studio", "Experienced"],
+    ["GitHub Actions", "Familiar"]
   ],
 
   "ai_systems.ts":
@@ -43,7 +44,7 @@ export const skillsData: Record<string, string[][]> = {
     ["SciKit", "Experienced"],
     ["PyTorch", "Knowledgeable"],
     ["CUDA", "Knowledgeable"],
-    ["OpenCV", "Adequate"]
+    ["OpenCV", "Familiar"]
   ]
 
 }
