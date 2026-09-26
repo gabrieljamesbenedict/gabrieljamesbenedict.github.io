@@ -1,48 +1,49 @@
-export const skillsData: Record<string, string[]> = {
+export const skillsData: Record<string, string[][]> = {
 
   "languages.ts":
   [
-    "JavaScript",
-    "TypeScript",
-    "Java",
-    "C++",
-    "Python"
+    ["Java", "Skilled - Note: My primary programming language"],
+    ["JavaScript/TypeScript", "Competent"],
+    ["SQL", "Competent"],
+    ["Python", "Competent"],
+    ["HTML & CSS", "Competent"],
+    ["PHP", "Experienced"],
+    ["Visual Basic", "Knowledgeable"]
   ],
 
   "databases.ts":
   [
-    "MySQL",
-    "MongoDB",
-    "Firebase Firestore"
+    ["MySQL", "Experienced"],
+    ["MongoDB", "Knowledgeable"],
+    ["PostgreSQL", "Knowledgeable"],
+    ["Firebase Firestore", "Knowledgeable"]
   ],
 
   "frameworks.ts":
   [
-    "React",
-    "Angular",
-    "SpringBoot",
-    "Express.js",
-    "NestJS",
-    "Fastify",
-    "ReactNative",
-    "Flutter"
+    ["Spring Boot", "Skilled"],
+    ["Express.js", "Competent"],
+    ["React", "Competent"],
+    ["Fastify", "Experienced"],
+    ["Angular", "Knowledgeable"],
+    ["LibGDX","Knowledgeable"]
   ],
 
   "dev_tools.ts":
   [
-    "Docker",
-    "Android Studio",
-    "Git",
-    "Socket.IO",
-    "Canva"
+    ["Git", "Competent"],
+    ["Docker", "Competent"],
+    ["Postman", "Experienced"],
+    ["Android Studio", "Experienced"]
   ],
 
   "ai_systems.ts":
   [
-    "PyTorch",
-    "Ultralytics YOLO",
-    "OpenCV",
-    "CUDA"
+    ["Ultralytics YOLO", "Experienced"],
+    ["SciKit", "Experienced"],
+    ["PyTorch", "Knowledgeable"],
+    ["CUDA", "Knowledgeable"],
+    ["OpenCV", "Adequate"]
   ]
 
 }

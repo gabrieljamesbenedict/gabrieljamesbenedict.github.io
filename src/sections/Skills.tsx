@@ -3,7 +3,9 @@ import { skillsData } from "../data/SkillsData"
 import "../styles/Skills.css"
 
 const Skills = () => {
+
     const [activeTab, setActiveTab] = useState("languages.ts")
+    const maxLength = Math.max(...skillsData[activeTab].map(s => s[0].length)) + 5;
 
     return (
         <section className="skills" id="skills">
@@ -43,11 +45,10 @@ const Skills = () => {
                 <div className="skills__tags">
                     {skillsData[activeTab].map((skill, index) => (
                     <div key={index} className="skills__code-line skills__code-line--indented">
-                        <span className="skills__tag">
-                            {/* <img src={JavaIcon} className="skills__icon" alt="" /> */}
-                            {skill}
+                        <span className="skills__tag" style={{ minWidth: `${maxLength}ch`, display: "inline-block" }}>
+                            {skill[0]}{index < skillsData[activeTab].length - 1 ? "," : ""}
                         </span>
-                        {index < skillsData[activeTab].length - 1 ? "," : ""}
+                        <span className="skills__comment">// {skill[1]}</span>
                     </div>
                     ))}
                 </div>
