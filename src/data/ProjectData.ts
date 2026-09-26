@@ -7,27 +7,27 @@ export interface ProjectModel {
 }
 
 export const ProjectData: Record<string, ProjectModel> = {
-    "Lorem Ipsum": {
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        image: "/images/lorem1.png",
-        tags: ["Lorem", "Ipsum"],
-        github: "https://github.com/lorem/1",
-        url: "https://lorem1.com"
+    "Riel Armory": {
+        description: "Dockerized e-commerce web app that offers firearms and educates users about firearms best practices laws to follow.",
+        image: "",
+        tags: ["Angular", "Spring Boot", "Docker", "MySQL"],
+        github: "https://github.com/gabrieljamesbenedict/riel-armory",
+        url: ""
     },
 
-    "Dolor Sit": {
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        image: "/images/lorem1.png",
-        tags: ["Lorem", "Ipsum"],
+    "WikiRizal": {
+        description: "A comprehensive digital encyclopedia dedicated to Dr. Jose Rizal, the national hero of the Philippines. This interactive website provides detailed information about his life, works, family, medical practice, and lasting impact on Philippine history.",
+        image: "",
+        tags: ["HTML", "CSS", "JavaScript"],
         github: "https://github.com/lorem/1",
-        url: "https://lorem1.com"
+        url: "https://gabrieljamesbenedict.github.io/WikiRizal/"
     },
 
-    "Amet Consectetur": {
-        description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        image: "/images/lorem1.png",
-        tags: ["Lorem", "Ipsum"],
-        github: "https://github.com/lorem/1",
-        url: "https://lorem1.com"
+    "TaskMaster": {
+        description: "Full-stack productivity tracking mobile-app for parents to monitor children's task progress. Led backend development and database management",
+        image: "",
+        tags: ["Android Studio", "Android Views", "Java", "Firebase"],
+        github: "https://github.com/XenDeQwak/TaskMaster",
+        url: ""
     }
 };

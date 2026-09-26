@@ -4,6 +4,7 @@ import { ProjectData } from "../data/ProjectData";
 const Projects = () => {
 
     const GithubIcon = "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png"
+    const HyperlinkIcon = "https://img.icons8.com/?size=100&id=tEoXnEjzZWZw&format=png&color=FFFFFF"
 
     return (
         <section className="projects" id="projects">
@@ -13,17 +14,26 @@ const Projects = () => {
                     {Object.entries(ProjectData).map(([title, data]) => (
                         <div key={title} className="projects__card">
                             <h2 className="projects__card-title">{title}</h2>
-                            <img className="projects__card-img" src={data.image} alt={title} />
+                            {/* <img className="projects__card-img" src={data.image} alt={title} /> */}
                             <p className="projects__card-description">{data.description}</p>
                             <div className="projects__card-tags">
                                 {data.tags.map((tag) => (
                                 <span key={tag}>{tag}</span>
                                 ))}
                             </div>
-                            <a className="projects__card-github" href={data.github}>
-                                <img className="projects__card-github-icon" src={GithubIcon} alt="" />
-                                GitHub
-                            </a>
+                            <div className="projects__card-links">
+                                <a className="projects__card-github" href={data.github}>
+                                    <img className="projects__card-github-icon" src={GithubIcon} alt="" />
+                                    GitHub
+                                </a>
+                                {
+                                    (data.url != "") &&
+                                    <a className="projects__card-link" href={data.url}>
+                                        <img className="projects__card-link-icon" src={HyperlinkIcon} alt="" />
+                                        Link
+                                    </a>
+                                }
+                            </div>
                         </div>
                     ))}
                 </div>

@@ -87,8 +87,14 @@
   width: fit-content;
 }
 
+.projects__card-links {
+  display: flex;
+  gap: 0.5rem;
+}
+
 .projects__card-github,
 .projects__card-link {
+  flex: 1; 
   font-family: 'Monaspace Xenon', monospace;
   text-decoration: none;
   color: #ffffff;
@@ -111,9 +117,11 @@
   border-color: rgba(139, 92, 246, 0.4);
 }
 
-.projects__card-github-icon {
+.projects__card-github-icon,
+.projects__card-link-icon {
   width: 1.25rem;
   height: 1.25rem;
+  color: white;
   object-fit: contain;
 }
 
