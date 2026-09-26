@@ -44,3 +44,7 @@ html {
   align-items: center;
   justify-content: center;
 }
+
+[id] {
+  scroll-margin-top: 3rem;
+}

@@ -6,6 +6,7 @@ import Projects from "./sections/Projects.tsx"
 import Skills from "./sections/Skills.tsx"
 import Education from "./sections/Education.tsx"
 import Contact from "./sections/Contact.tsx"
+import Footer from "./sections/Footer.tsx"
 
 const App = () => {
 
@@ -20,6 +21,7 @@ const App = () => {
         <Education/>
         <Contact/>
       </div>
+      <Footer/>
     </>
   )
 }
