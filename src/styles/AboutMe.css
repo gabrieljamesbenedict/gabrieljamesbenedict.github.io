@@ -1,0 +1,36 @@
+.about {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 5rem 2.5rem;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about__title {
+  font-family: 'Monaspace Argon', monospace;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+}
+
+.about__content {
+  background-color: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: 24px;
+  padding: 2.5rem;
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about__text {
+  font-family: 'Monaspace Neon', monospace;
+  font-size: 1.125rem;
+  line-height: 1.6;
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+}
+
+.about__text:last-child {
+  margin-bottom: 0;
+}
