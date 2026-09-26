@@ -1,15 +1,42 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+@font-face {
+  font-family: 'Monaspace Neon';
+  src: url('https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceNeon-Regular.woff2') format('woff2');
 }
 
-.app-container {
+@font-face {
+  font-family: 'Monaspace Argon';
+  src: url('https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceArgon-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Monaspace Xenon';
+  src: url('https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceXenon-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Monaspace Radon';
+  src: url('https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceRadon-Regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Monaspace Krypton';
+  src: url('https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceKrypton-Regular.woff2') format('woff2');
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Monaspace Krypton', system-ui, sans-serif;
+  color: #FBFAF2;
+}
+
+.app__container {
   min-height: 100vh;
   background-color: #0f172a;
   background-image: radial-gradient(circle at 20% 30%, rgba(139, 92, 246, 0.3) 0%, transparent 40%), radial-gradient(circle at 80% 80%, rgba(14, 165, 233, 0.3) 0%, transparent 40%);
   display: flex;
   align-items: center;
   justify-content: center;
-  font-family: system-ui, sans-serif;
+  scroll-behavior: smooth;
 }

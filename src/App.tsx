@@ -1,18 +1,14 @@
-import './styles/index.css'
+import "./styles/index.css"
+import Header from "./sections/Header.tsx"
 
 const App = () => {
   return (
-    <div className="app-container">
-      <div className="glass-card">
-        <h1 className="glass-title">Portfolio</h1>
-        <p className="glass-description">
-          Computer Science Student focusing on tech solutions.
-        </p>
-        <button className="glass-button">
-          View Projects
-        </button>
+    <>
+      <Header/>
+      <div className="app__container">
+
       </div>
-    </div>
+    </>
   )
 }
 
