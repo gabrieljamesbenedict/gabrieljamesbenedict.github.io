@@ -2,7 +2,7 @@ name: DeployPortfolio
 on:
   push:
     branches:
-      - main
+      - master
 permissions:
   contents: read
   pages: write
