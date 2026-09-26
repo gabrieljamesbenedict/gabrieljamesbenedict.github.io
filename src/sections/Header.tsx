@@ -12,7 +12,7 @@ const Header = () => {
           <a className="header__link" href="#education">Education</a>
         </nav>
         <nav>
-          <a className="header__link--special" href="#contactme">Contact Me</a>
+          <a className="header__link--special" href="#contact">Contact Me</a>
         </nav>
       </div>
     </header>

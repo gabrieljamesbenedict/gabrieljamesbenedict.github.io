@@ -5,7 +5,7 @@ const Education = () => {
   const commits = Object.values(EducationData);
 
   return (
-    <section className="education">
+    <section className="education" id="education">
       <div className="education__container">
         <h2 className="education__section-title">Education</h2>
 

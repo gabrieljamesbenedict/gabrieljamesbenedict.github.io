@@ -7,7 +7,7 @@ const Contact = () => {
     const GithubIcon = "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png"
 
   return (
-    <section className="contact">
+    <section className="contact" id="contact">
       <div className="contact__container">
         <h2 className="contact__title">Get In Touch</h2>
         
