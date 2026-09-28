@@ -16,11 +16,11 @@ const Contact = () => {
             <img className="contact__icon" src={EmailIcon} alt="" />
             Email
           </a>
-          <a className="contact__link" href="https://linkedin.com/in/your-profile" target="_blank" rel="noreferrer">
+          <a className="contact__link" href="https://www.linkedin.com/in/gjbmloslos/" target="_blank" rel="noreferrer">
             <img className="contact__icon" src={LinkedInIcon} alt="" />
             LinkedIn
           </a>
-          <a className="contact__link" href="https://github.com/your-username" target="_blank" rel="noreferrer">
+          <a className="contact__link" href="https://github.com/gabrieljamesbenedict" target="_blank" rel="noreferrer">
             <img className="contact__icon" src={GithubIcon} alt="" />
             GitHub
           </a>
