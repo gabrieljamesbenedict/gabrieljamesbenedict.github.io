@@ -1,10 +1,12 @@
-import { useEffect, useRef } from "react";
+
+import "./styles/Desktop.css"
+import Desktop from "./components/Desktop";
 
 const App = () => {
 
   return (
     <div>
-      
+      <Desktop/>
     </div>
   )
 }

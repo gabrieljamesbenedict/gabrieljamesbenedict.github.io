@@ -1,26 +1,35 @@
 @font-face {
-  font-family: 'Monaspace Neon';
-  src: url('https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceNeon-Regular.woff2') format('woff2');
+  font-family: "Monaspace Neon";
+  src: url("https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceNeon-Regular.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Monaspace Argon';
-  src: url('https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceArgon-Regular.woff2') format('woff2');
+  font-family: "Monaspace Argon";
+  src: url("https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceArgon-Regular.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Monaspace Xenon';
-  src: url('https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceXenon-Regular.woff2') format('woff2');
+  font-family: "Monaspace Xenon";
+  src: url("https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceXenon-Regular.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Monaspace Radon';
-  src: url('https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceRadon-Regular.woff2') format('woff2');
+  font-family: "Monaspace Radon";
+  src: url("https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceRadon-Regular.woff2") format("woff2");
 }
 
 @font-face {
-  font-family: 'Monaspace Krypton';
-  src: url('https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceKrypton-Regular.woff2') format('woff2');
+  font-family: "Monaspace Krypton";
+  src: url("https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceKrypton-Regular.woff2") format("woff2");
+}
+
+:root {
+  --font-neon: "Monaspace Neon";
+  --font-argon: "Monaspace Argon";
+  --font-xenon: "Monaspace Xenon";
+  --font-radon: "Monaspace Radon";
+  --font-krypton: "Monaspace Krypton";
+  --color-text: #FBFAF2;
 }
 
 html {
@@ -31,6 +40,5 @@ html {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Monaspace Krypton', system-ui, sans-serif;
-  color: #FBFAF2;
+  color: var(--color-text);
 }
