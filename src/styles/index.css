@@ -34,15 +34,3 @@ html {
   font-family: 'Monaspace Krypton', system-ui, sans-serif;
   color: #FBFAF2;
 }
-
-.app__container {
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
-
-[id] {
-  scroll-margin-top: 3rem;
-}
