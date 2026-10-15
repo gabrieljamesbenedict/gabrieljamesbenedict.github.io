@@ -48,7 +48,6 @@
   color: #ffffff;
   border: 1px solid rgba(139, 92, 246, 0.5);
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 
   &:hover {
     background-color: rgba(139, 92, 246, 0.6);
@@ -62,7 +61,6 @@
   color: #cbd5e1;
   border: 1px solid rgba(255, 255, 255, 0.1);
   backdrop-filter: blur(8px);
-  -webkit-backdrop-filter: blur(8px);
 
   &:hover {
     color: #ffffff;
