@@ -2,9 +2,9 @@ import "../styles/Contact.css"
 
 const Contact = () => {
 
-    const EmailIcon = "https://uxwing.com/wp-content/themes/uxwing/download/communication-chat-call/email-envelope-white-icon.png"
-    const LinkedInIcon = "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/linkedin-app-white-icon.png"
-    const GithubIcon = "https://uxwing.com/wp-content/themes/uxwing/download/brands-and-social-media/github-white-icon.png"
+    const EmailIcon = "/icons/email-envelope-white-icon.png"
+    const LinkedInIcon = "/icons/linkedin-app-white-icon.png"
+    const GithubIcon = "/icons/github-white-icon.png"
 
   return (
     <section className="contact" id="contact">
@@ -13,15 +13,15 @@ const Contact = () => {
         
         <div className="contact__links">
           <a className="contact__link" href="mailto:benok.loslos@gmail.com">
-            <img className="contact__icon" src={EmailIcon} alt="" />
+            <img className="contact__icon" src={EmailIcon} alt="Email" />
             Email
           </a>
           <a className="contact__link" href="https://www.linkedin.com/in/gjbmloslos/" target="_blank" rel="noreferrer">
-            <img className="contact__icon" src={LinkedInIcon} alt="" />
+            <img className="contact__icon" src={LinkedInIcon} alt="LinkedIn" />
             LinkedIn
           </a>
           <a className="contact__link" href="https://github.com/gabrieljamesbenedict" target="_blank" rel="noreferrer">
-            <img className="contact__icon" src={GithubIcon} alt="" />
+            <img className="contact__icon" src={GithubIcon} alt="GitHub" />
             GitHub
           </a>
         </div>
