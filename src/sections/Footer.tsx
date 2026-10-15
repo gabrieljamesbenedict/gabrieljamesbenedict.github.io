@@ -5,7 +5,7 @@ export default function Footer() {
         <footer className="footer">
         <div className="footer__container">
                 <div className="footer__info">
-                <p className="footer__text">&copy; 2026 Gabriel Loslos. All rights reserved.</p>
+                <p className="footer__text">&copy; {new Date().getFullYear()} Gabriel Loslos. All rights reserved.</p>
                 <p className="footer__text">Built with React and Vite.</p>
             </div>
             <div className="footer__links">
