@@ -33,39 +33,11 @@
   z-index: 5;
 }
 
-.about .window {
-  transform: rotate(-1deg);
-}
-
-.projects .window {
-  transform: rotate(0.75deg);
-}
-
-.skills .window {
-  transform: rotate(-0.5deg);
-}
-
-.education .window {
-  transform: rotate(0.5deg);
-}
-
-.contact .window {
-  transform: rotate(-0.75deg);
-}
-
 @media (max-width: 768px) {
   .projects,
   .skills,
   .education,
   .contact {
     margin-top: 0;
-  }
-
-  .about .window,
-  .projects .window,
-  .skills .window,
-  .education .window,
-  .contact .window {
-    transform: none;
   }
 }
