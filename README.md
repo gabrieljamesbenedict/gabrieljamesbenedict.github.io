@@ -1,75 +1,40 @@
-# React + TypeScript + Vite
+# gabrieljamesbenedict.github.io
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+Personal portfolio for Gabriel Loslos — Software Developer & Designer. Built with React 19, TypeScript, and Vite, deployed to GitHub Pages (user site).
 
-Currently, two official plugins are available:
+Live: https://gabrieljamesbenedict.github.io/
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Stack
 
-## React Compiler
+- React 19 + TypeScript + Vite 8
+- Plain CSS (BEM, one file per section)
+- Vanta.js NET background (loaded via CDN in `src/App.tsx`) + Three.js r134
+- Monaspace fonts via CDN
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+## Develop
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
-
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
-
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
+```bash
+npm ci
+npm run dev      # http://localhost:3000
+npm run lint
+npm run build    # tsc -b && vite build -> dist/
+npm run preview
 ```
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+## Structure
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+- `src/App.tsx` — layout + Vanta background init
+- `src/sections/` — Header, Hero, AboutMe, Projects, Skills, Education, Contact, Footer
+- `src/data/` — ProjectData, SkillsData, EducationData
+- `src/styles/` — global `index.css` + per-section CSS
+- `public/icons/` — vendored white PNG icons (no hotlinking)
+- `public/favicon.svg`, `public/icons.svg`
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+## Deploy
 
-```
+Push to `master` triggers `.github/workflows/deploy.yaml`: install, build, upload `dist/`, deploy via `deploy-pages`. `vite.config.ts` uses `base: '/'` for user pages.
+
+## Notes
+
+- Three.js / Vanta versions are pinned by CDN URL in `App.tsx` — do not bump without testing for API breaks.
+- Project links live in `src/data/ProjectData.ts`.
