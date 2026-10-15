@@ -1,0 +1,79 @@
+.app__container {
+  overflow-x: clip;
+}
+
+.about,
+.projects,
+.skills,
+.education,
+.contact {
+  position: relative;
+}
+
+.projects,
+.skills,
+.education,
+.contact {
+  margin-top: -2rem;
+}
+
+.projects {
+  z-index: 2;
+}
+
+.skills {
+  z-index: 3;
+}
+
+.education {
+  z-index: 4;
+}
+
+.contact {
+  z-index: 5;
+}
+
+.section .window {
+  transition: transform 300ms ease;
+}
+
+.about .window {
+  transform: rotate(-1deg);
+}
+
+.projects .window {
+  transform: rotate(0.75deg);
+}
+
+.skills .window {
+  transform: rotate(-0.5deg);
+}
+
+.education .window {
+  transform: rotate(0.5deg);
+}
+
+.contact .window {
+  transform: rotate(-0.75deg);
+}
+
+.section .window:hover {
+  transform: rotate(0deg);
+}
+
+@media (max-width: 768px) {
+  .projects,
+  .skills,
+  .education,
+  .contact {
+    margin-top: 0;
+  }
+
+  .about .window,
+  .projects .window,
+  .skills .window,
+  .education .window,
+  .contact .window {
+    transform: none;
+  }
+}
