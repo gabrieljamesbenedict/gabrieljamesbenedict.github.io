@@ -1,9 +1,9 @@
 :root {
   --bg-deep: #0f172a;
-  --glass-bg: rgba(255, 255, 255, 0.05);
-  --glass-bg-strong: rgba(15, 23, 42, 0.35);
-  --glass-header: rgba(0, 0, 0, 0.3);
-  --glass-border: rgba(255, 255, 255, 0.1);
+  --glass-bg: rgba(255, 255, 255, 0);
+  --glass-bg-strong: rgba(15, 23, 42, 0);
+  --glass-header: rgba(0, 0, 0, 0.4);
+  --glass-border: rgba(255, 255, 255, 0.3);
   --glass-divider: rgba(255, 255, 255, 0.05);
   --text-bright: #f8fafc;
   --text-body: #cbd5e1;
@@ -14,7 +14,7 @@
   --accent-sky: #0ea5e9;
   --accent-green: #10b981;
   --accent-amber: #f59e0b;
-  --tag-bg: rgba(14, 165, 233, 0.15);
+  --tag-bg: rgba(14, 165, 233, 0.2);
   --tag-border: rgba(14, 165, 233, 0.3);
   --tag-text: #e0f2fe;
   --radius-window: 12px;
