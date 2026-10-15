@@ -11,8 +11,14 @@ import Contact from "./sections/Contact.tsx"
 import Footer from "./sections/Footer.tsx"
 
 declare global {
+  interface VantaEffect {
+    destroy(): void;
+  }
+
   interface Window {
-    VANTA: any;
+    VANTA?: {
+      NET: (options: Record<string, unknown>) => VantaEffect;
+    };
   }
 }
 
@@ -20,7 +26,7 @@ const App = () => {
   const vantaRef = useRef<HTMLDivElement>(null);
 
   useEffect(() => {
-    let vantaEffect: any;
+    let vantaEffect: VantaEffect | undefined;
     
     const initVanta = () => {
       if (!window.VANTA) return;
@@ -34,7 +40,7 @@ const App = () => {
         scale: 1.00,
         scaleMobile: 1.00,
         color: 0x543fff,
-        backgroundColor: 0xd0d24,
+        backgroundColor: 0x0d0d24,
         points: 20.00,
         maxDistance: 26.00,
         spacing: 14.00,
