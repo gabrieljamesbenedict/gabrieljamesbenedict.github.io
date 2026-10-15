@@ -33,6 +33,11 @@ html {
   scroll-behavior: smooth;
 }
 
+body {
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -41,12 +46,18 @@ html {
   color: #FBFAF2;
 }
 
+.app__background {
+  position: relative;
+  min-height: 100vh;
+  min-height: 100dvh;
+}
+
 .app__container {
   min-height: 100vh;
+  min-height: 100dvh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
 }
 
 [id] {

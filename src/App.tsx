@@ -76,9 +76,9 @@ const App = () => {
   }, []);
 
   return (
-    <div>
+    <div ref={vantaRef} className="app__background">
       <Header/>
-      <div ref={vantaRef} className="app__container">
+      <div className="app__container">
         <Hero/>
         <AboutMe/>
         <Projects/>
