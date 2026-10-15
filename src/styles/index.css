@@ -1,3 +1,8 @@
+@import './tokens.css';
+@import './layout.css';
+@import './window.css';
+@import './card.css';
+
 @font-face {
   font-family: 'Monaspace Neon';
   src: url('https://cdn.jsdelivr.net/gh/githubnext/monaspace@main/fonts/webfonts/MonaspaceNeon-Regular.woff2') format('woff2');

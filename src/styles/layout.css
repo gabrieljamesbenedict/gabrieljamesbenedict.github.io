@@ -1,0 +1,34 @@
+.section {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.section__container {
+  width: 100%;
+  margin: 0 var(--container-margin);
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.section__title {
+  font-family: var(--font-title);
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: var(--text-bright);
+  text-align: center;
+}
+
+@media (max-width: 1200px) {
+  .section__container {
+    margin: 0 5rem;
+  }
+}
+
+@media (max-width: 768px) {
+  .section__container {
+    margin: 0 2rem;
+  }
+}

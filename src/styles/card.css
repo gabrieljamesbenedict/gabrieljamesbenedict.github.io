@@ -1,0 +1,28 @@
+.glass-card {
+  background-color: var(--glass-bg);
+  border: 1px solid var(--glass-border);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-radius: var(--radius-card);
+  padding: 2rem;
+  box-shadow: var(--shadow-card);
+  transition: transform 200ms ease, border-color 200ms ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.glass-card:hover {
+  transform: translateY(-5px);
+  border-color: rgba(139, 92, 246, 0.4);
+}
+
+.tag-pill {
+  padding: 0.35rem 0.85rem;
+  background-color: var(--tag-bg);
+  border: 1px solid var(--tag-border);
+  border-radius: var(--radius-pill);
+  font-family: var(--font-code);
+  font-size: 0.875rem;
+  color: var(--tag-text);
+  width: fit-content;
+}
