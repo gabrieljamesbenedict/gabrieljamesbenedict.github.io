@@ -33,10 +33,6 @@
   z-index: 5;
 }
 
-.section .window {
-  transition: transform 300ms ease;
-}
-
 .about .window {
   transform: rotate(-1deg);
 }
@@ -55,10 +51,6 @@
 
 .contact .window {
   transform: rotate(-0.75deg);
-}
-
-.section .window:hover {
-  transform: rotate(0deg);
 }
 
 @media (max-width: 768px) {
