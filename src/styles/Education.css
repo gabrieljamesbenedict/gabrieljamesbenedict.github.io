@@ -1,3 +1,122 @@
+.education {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  box-sizing: border-box;
+}
+
+.education__container {
+  width: 100%;
+  margin: 0 10rem;
+  padding: 3rem 0;
+  display: flex;
+  flex-direction: column;
+}
+
+.education__section-title {
+  font-family: 'Monaspace Argon', monospace;
+  font-size: 2.5rem;
+  margin-bottom: 2rem;
+  color: #f8fafc;
+  text-align: center;
+}
+
+.education__window {
+  background-color: rgba(15, 23, 42, 0.6);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  color: #e2e8f0;
+  overflow: hidden;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+  display: flex;
+  flex-direction: column;
+}
+
+.education__header {
+  background-color: rgba(0, 0, 0, 0.3);
+  display: flex;
+  align-items: center;
+  padding: 0 1rem;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.education__controls {
+  display: flex;
+  gap: 0.5rem;
+  margin-right: 1.5rem;
+}
+
+.education__control {
+  width: 12px;
+  height: 12px;
+  border-radius: 9999px;
+}
+
+.education__control--close {
+  background-color: #ff5f56;
+}
+
+.education__control--minimize {
+  background-color: #ffbd2e;
+}
+
+.education__control--maximize {
+  background-color: #27c93f;
+}
+
+.education__tabs {
+  display: flex;
+  overflow-x: auto;
+}
+
+.education__tab {
+  background: transparent;
+  border: none;
+  color: #64748b;
+  font-family: 'Monaspace Krypton', monospace;
+  font-size: 0.9rem;
+  cursor: pointer;
+  padding: 0.75rem 1.25rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+  border-right: 1px solid rgba(255, 255, 255, 0.05);
+  white-space: nowrap;
+}
+
+.education__tab:hover {
+  background-color: rgba(255, 255, 255, 0.02);
+}
+
+.education__tab--active {
+  background-color: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+  box-shadow: inset 0 2px 0 #0ea5e9;
+}
+
+.education__tab-close {
+  font-size: 1.2rem;
+  line-height: 0.5;
+}
+
+.education__body {
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Monaspace Xenon', monospace;
+}
+
+.education__title {
+  font-family: 'Monaspace Krypton', monospace;
+  font-size: 1.25rem;
+  margin: 0 0 2.5rem 0;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  color: #f8fafc;
+}
+
 .education__timeline {
   display: flex;
   flex-direction: column;
@@ -93,7 +212,16 @@
   font-family: 'Monaspace Neon', monospace;
 }
 
+@media (max-width: 1200px) {
+  .education__container {
+    margin: 0 5rem;
+  }
+}
+
 @media (max-width: 768px) {
+  .education__container {
+    margin: 0 2rem;
+  }
   .education__info {
     grid-template-columns: 1fr;
     gap: 0.5rem;

@@ -3,7 +3,11 @@ import { useEffect, useRef } from "react";
 import "./styles/index.css"
 import Header from "./sections/Header.tsx"
 import Hero from "./sections/Hero.tsx"
-import Workspace from "./components/Workspace.tsx"
+import AboutMe from "./sections/AboutMe.tsx"
+import Projects from "./sections/Projects.tsx"
+import Skills from "./sections/Skills.tsx"
+import Education from "./sections/Education.tsx"
+import Contact from "./sections/Contact.tsx"
 import Footer from "./sections/Footer.tsx"
 
 declare global {
@@ -23,7 +27,7 @@ const App = () => {
 
   useEffect(() => {
     let vantaEffect: VantaEffect | undefined;
-
+    
     const initVanta = () => {
       if (!window.VANTA) return;
       vantaEffect = window.VANTA.NET({
@@ -55,7 +59,7 @@ const App = () => {
         vantaScript.id = "vanta-script";
         vantaScript.src = "https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js";
         document.head.appendChild(vantaScript);
-
+        
         vantaScript.onload = initVanta;
       };
     } else {
@@ -72,7 +76,11 @@ const App = () => {
       <Header/>
       <div ref={vantaRef} className="app__container">
         <Hero/>
-        <Workspace/>
+        <AboutMe/>
+        <Projects/>
+        <Skills/>
+        <Education/>
+        <Contact/>
       </div>
       <Footer/>
     </div>
