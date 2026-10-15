@@ -55,6 +55,9 @@
 .window__tabs {
   display: flex;
   overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: thin;
+  min-width: 0;
 }
 
 .window__tab {
@@ -70,6 +73,7 @@
   gap: 0.5rem;
   border-right: 1px solid var(--glass-divider);
   white-space: nowrap;
+  min-height: 44px;
 }
 
 button.window__tab {
@@ -100,4 +104,12 @@ div.window__tab {
   display: flex;
   flex-direction: column;
   font-family: var(--font-code);
+  min-width: 0;
+  overflow-x: clip;
+}
+
+@media (max-width: 480px) {
+  .window__body {
+    padding: 1.25rem;
+  }
 }

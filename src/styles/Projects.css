@@ -23,6 +23,8 @@
   display: flex;
   flex-direction: column;
   gap: 0.25rem;
+  min-height: 44px;
+  justify-content: center;
 }
 
 .projects__item:hover {
@@ -100,5 +102,27 @@
 @media (max-width: 700px) {
   .projects__split {
     grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .projects__links {
+    flex-direction: column;
+  }
+
+  .projects__link {
+    min-height: 44px;
+  }
+}
+
+@media (hover: none) {
+  .projects__item:active {
+    background-color: rgba(255, 255, 255, 0.05);
+    color: var(--text-bright);
+  }
+
+  .projects__link:active {
+    background-color: rgba(139, 92, 246, 0.15);
+    border-color: rgba(139, 92, 246, 0.4);
   }
 }

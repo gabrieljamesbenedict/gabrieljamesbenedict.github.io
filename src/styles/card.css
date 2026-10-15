@@ -14,6 +14,16 @@
   border-color: rgba(139, 92, 246, 0.4);
 }
 
+@media (hover: none) {
+  .glass-card:hover {
+    transform: none;
+  }
+
+  .glass-card:active {
+    border-color: rgba(139, 92, 246, 0.4);
+  }
+}
+
 .tag-pill {
   padding: 0.35rem 0.85rem;
   background-color: var(--tag-bg);
