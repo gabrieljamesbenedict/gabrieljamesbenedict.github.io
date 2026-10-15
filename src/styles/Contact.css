@@ -16,6 +16,8 @@
   color: var(--text-body);
   text-decoration: none;
   transition: border-color 200ms ease, background-color 200ms ease;
+  min-height: 44px;
+  overflow-wrap: anywhere;
 }
 
 .contact__cmd:hover {
@@ -43,4 +45,18 @@
   overflow: hidden;
   text-overflow: ellipsis;
   white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .contact__url {
+    display: none;
+  }
+}
+
+@media (hover: none) {
+  .contact__cmd:active {
+    border-color: rgba(139, 92, 246, 0.4);
+    background-color: rgba(139, 92, 246, 0.08);
+    color: var(--text-bright);
+  }
 }

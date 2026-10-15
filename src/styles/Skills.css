@@ -4,6 +4,8 @@
   font-family: 'Monaspace Xenon', monospace;
   font-size: 1rem;
   min-height: 30rem;
+  overflow-x: auto;
+  max-width: 100%;
 }
 
 .skills__line-numbers {
@@ -27,6 +29,7 @@
   display: flex;
   flex-direction: column;
   color: #cbd5e1;
+  min-width: max-content;
 }
 
 .skills__code-line {

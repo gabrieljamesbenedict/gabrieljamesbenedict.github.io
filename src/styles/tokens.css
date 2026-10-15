@@ -24,7 +24,7 @@
   --font-body: 'Monaspace Krypton', monospace;
   --font-text: 'Monaspace Neon', monospace;
   --font-code: 'Monaspace Xenon', monospace;
-  --container-margin: 10rem;
+  --container-margin: clamp(1rem, 5vw, 10rem);
   --shadow-window: 0 10px 30px rgba(0, 0, 0, 0.3);
   --shadow-card: 0 4px 30px rgba(0, 0, 0, 0.1);
 }

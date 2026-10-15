@@ -34,10 +34,14 @@ const App = () => {
     
     const initVanta = () => {
       if (!window.VANTA) return;
+      if (window.matchMedia("(prefers-reduced-motion: reduce)").matches) return;
+      const isMobileDevice =
+        window.matchMedia("(max-width: 768px)").matches ||
+        window.matchMedia("(pointer: coarse)").matches;
       vantaEffect = window.VANTA.NET({
         el: vantaRef.current,
         mouseControls: false,
-        touchControls: true,
+        touchControls: false,
         gyroControls: false,
         minHeight: 200.00,
         minWidth: 200.00,
@@ -45,9 +49,9 @@ const App = () => {
         scaleMobile: 1.00,
         color: 0x543fff,
         backgroundColor: 0x0d0d24,
-        points: 20.00,
-        maxDistance: 26.00,
-        spacing: 14.00,
+        points: isMobileDevice ? 14.00 : 20.00,
+        maxDistance: isMobileDevice ? 24.00 : 26.00,
+        spacing: isMobileDevice ? 16.00 : 14.00,
         showDots: true
       });
     };
@@ -61,7 +65,7 @@ const App = () => {
       threeScript.onload = () => {
         const vantaScript = document.createElement("script");
         vantaScript.id = "vanta-script";
-        vantaScript.src = "https://cdn.jsdelivr.net/npm/vanta@latest/dist/vanta.net.min.js";
+        vantaScript.src = "https://cdn.jsdelivr.net/npm/vanta@0.5.24/dist/vanta.net.min.js";
         document.head.appendChild(vantaScript);
         
         vantaScript.onload = initVanta;
@@ -76,7 +80,8 @@ const App = () => {
   }, []);
 
   return (
-    <div ref={vantaRef} className="app__background">
+    <div className="app__background">
+      <div ref={vantaRef} className="app__vanta" aria-hidden="true" />
       <Header/>
       <div className="app__container">
         <Hero/>

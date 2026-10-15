@@ -1,8 +1,9 @@
 .about__lead {
   font-family: var(--font-title);
-  font-size: 1.5rem;
+  font-size: clamp(1.15rem, 4vw, 1.5rem);
   color: var(--text-bright);
   margin-bottom: 1rem;
+  overflow-wrap: break-word;
 }
 
 .about__bio {
