@@ -24,8 +24,12 @@ declare global {
 
 const App = () => {
   const vantaRef = useRef<HTMLDivElement>(null);
+  const vantaStarted = useRef(false);
 
   useEffect(() => {
+    if (vantaStarted.current) return;
+    vantaStarted.current = true;
+
     let vantaEffect: VantaEffect | undefined;
     
     const initVanta = () => {
