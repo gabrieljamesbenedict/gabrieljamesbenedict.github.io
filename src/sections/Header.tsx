@@ -1,12 +1,6 @@
 import { useEffect, useState } from "react";
 import "../styles/Header.css"
-
-const NAV_LINKS = [
-  { href: "#aboutme", label: "About Me" },
-  { href: "#projects", label: "Projects" },
-  { href: "#skills", label: "Skills" },
-  { href: "#education", label: "Education" },
-];
+import { navLinks, contactLink } from "../data/NavData"
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -33,14 +27,14 @@ const Header = () => {
       <div className="header__container">
         <h1 className="header__title">Hello World</h1>
         <nav className="header__nav" aria-label="Primary">
-          {NAV_LINKS.map((link) => (
+          {navLinks.map((link) => (
             <a key={link.href} className="header__link" href={link.href}>
               {link.label}
             </a>
           ))}
         </nav>
         <nav className="header__contact" aria-label="Contact">
-          <a className="header__link--special" href="#contact">Contact Me</a>
+          <a className="header__link--special" href={contactLink.href}>{contactLink.label}</a>
         </nav>
         <button
           type="button"
@@ -68,7 +62,7 @@ const Header = () => {
         inert={!menuOpen}
       >
         <nav className="header__drawer-nav" aria-label="Mobile">
-          {NAV_LINKS.map((link) => (
+          {navLinks.map((link) => (
             <a
               key={link.href}
               className="header__drawer-link"
@@ -81,11 +75,11 @@ const Header = () => {
           ))}
           <a
             className="header__link--special header__drawer-cta"
-            href="#contact"
+            href={contactLink.href}
             onClick={() => setMenuOpen(false)}
             tabIndex={menuOpen ? 0 : -1}
           >
-            Contact Me
+            {contactLink.label}
           </a>
         </nav>
       </aside>
