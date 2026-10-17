@@ -1,15 +1,6 @@
 import "../styles/Contact.css"
 import Window from "../components/Window"
-
-const EmailIcon = "/icons/email-envelope-white-icon.png"
-const LinkedInIcon = "/icons/linkedin-app-white-icon.png"
-const GithubIcon = "/icons/github-white-icon.png"
-
-const CONTACTS = [
-  { label: "Email", command: "open --email", url: "mailto:benok.loslos@gmail.com", icon: EmailIcon },
-  { label: "LinkedIn", command: "open --linkedin", url: "https://www.linkedin.com/in/gjbmloslos/", icon: LinkedInIcon },
-  { label: "GitHub", command: "open --github", url: "https://github.com/gabrieljamesbenedict", icon: GithubIcon },
-];
+import { contactLinks } from "../data/ContactData"
 
 const Contact = () => {
   return (
@@ -26,7 +17,7 @@ const Contact = () => {
           }
         >
           <div className="contact__cmds">
-            {CONTACTS.map((contact) => (
+            {contactLinks.map((contact) => (
               <a
                 key={contact.label}
                 className="contact__cmd"
