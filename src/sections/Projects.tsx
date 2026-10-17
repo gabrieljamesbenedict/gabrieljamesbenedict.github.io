@@ -59,6 +59,20 @@ const Projects = () => {
                                   </a>
                               )}
                           </div>
+                          {data.images.length > 0 && (
+                              <div className="projects__gallery">
+                                  <h4 className="projects__gallery-title">Gallery</h4>
+                                  {data.images.map((src) => (
+                                      <img
+                                        key={src}
+                                        className="projects__image"
+                                        src={src}
+                                        alt={`${selected} screenshot`}
+                                        loading="lazy"
+                                      />
+                                  ))}
+                              </div>
+                          )}
                       </div>
                   </div>
                 </Window>
