@@ -24,5 +24,5 @@ export const profile: ProfileModel = {
   code: ["Java", "JavaScript", "TypeScript", "SQL", "Python", "HTML", "CSS", "PHP", "Visual Basic"],
   stack: ["SpringBoot", "React", "ExpressJS", "Fastify", "Node", "Angular", "MySQL", "PostgreSQL", "MongoDB", "Firebase"],
   interests: ["Backend Development", "Game Development", "Pixel Art", "Gaming", "Anime", "D&D", "Magic: the Gathering"],
-  footerTagline: "Built with React and Vite. Background by Vanta.js",
+  footerTagline: "Built with React and Vite. Animated backgrounds by Vanta.js",
 };
