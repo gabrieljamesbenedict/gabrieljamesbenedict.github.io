@@ -153,7 +153,6 @@ export const backgroundOptions: BackgroundOption[] = [
   // Stylized CSS (cheap, no JavaScript)
   { id: "css-aurora", label: "Aurora", kind: "css", cssClass: "bg--aurora" },
   { id: "css-grid", label: "Grid", kind: "css", cssClass: "bg--grid" },
-  { id: "css-starfield", label: "Starfield", kind: "css", cssClass: "bg--starfield" },
   { id: "css-dot-grid", label: "Dot Grid", kind: "css", cssClass: "bg--dot-grid" },
   { id: "css-radial-blurs", label: "Radial Blurs", kind: "css", cssClass: "bg--radial-blurs" },
 
