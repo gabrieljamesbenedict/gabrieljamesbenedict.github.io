@@ -9,7 +9,7 @@ export const contactLinks: ContactModel[] = [
   {
     label: "Email",
     command: "open --email",
-    url: "mailto:benok.loslos@gmail.com",
+    url: "mailto:gjbmloslos@gmail.com",
     icon: "/icons/email-envelope-white-icon.png",
   },
   {
