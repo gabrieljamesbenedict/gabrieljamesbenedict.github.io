@@ -1,5 +1,6 @@
 import "../styles/AboutMe.css"
 import Window from "../components/Window"
+import { profile } from "../data/ProfileData"
 
 const AboutMe = () => {
   return (
@@ -15,28 +16,24 @@ const AboutMe = () => {
             </div>
           }
         >
-          <h3 className="about__lead">Gabriel James Benedict M Loslos</h3>
-          <p className="about__bio">
-            Hello World! I am a Computer Science major from Mapua University.
-          </p>
-          <p className="about__bio">
-            Designing and programming software has always been my passion ever since I was young.
-            I first started coding in Scratch. My primary skill is Backend Development and my favorite
-            framework to use is Spring Boot. I can also do Frontend Development and I&apos;ve used
-            React and Angular before.
-          </p>
+          <h3 className="about__lead">{profile.fullName}</h3>
+          {profile.bio.map((paragraph, index) => (
+            <p key={index} className="about__bio">
+              {paragraph}
+            </p>
+          ))}
           <div className="about__row">
             <span className="about__label">EDUCATION</span>
-            <span className="about__value">BS Computer Science — Mapua University</span>
+            <span className="about__value">{profile.education}</span>
           </div>
           <div className="about__row">
             <span className="about__label">LANGUAGES</span>
-            <span className="about__value">English, Filipino, Elven, Draconic</span>
+            <span className="about__value">{profile.languages}</span>
           </div>
           <div className="about__row">
             <span className="about__label">CODE</span>
             <span className="about__tags">
-              {["Java", "JavaScript", "TypeScript", "SQL", "Python", "HTML", "CSS", "PHP", "Visual Basic"].map((tag) => (
+              {profile.code.map((tag) => (
                 <span key={tag} className="tag-pill">{tag}</span>
               ))}
             </span>
@@ -44,7 +41,7 @@ const AboutMe = () => {
           <div className="about__row">
             <span className="about__label">STACK</span>
             <span className="about__tags">
-              {["SpringBoot", "React", "ExpressJS", "Fastify", "Node", "Angular", "MySQL", "PostgreSQL", "MongoDB", "Firebase"].map((tag) => (
+              {profile.stack.map((tag) => (
                 <span key={tag} className="tag-pill">{tag}</span>
               ))}
             </span>
@@ -52,7 +49,7 @@ const AboutMe = () => {
           <div className="about__row">
             <span className="about__label">INTERESTS</span>
             <span className="about__tags">
-              {["Backend Development", "Game Development", "Pixel Art", "Gaming", "Anime", "D&D", "Magic: the Gathering"].map((tag) => (
+              {profile.interests.map((tag) => (
                 <span key={tag} className="tag-pill">{tag}</span>
               ))}
             </span>
