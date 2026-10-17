@@ -25,7 +25,7 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__container">
-        <h1 className="header__title">Hello World</h1>
+        <a href="#hero"><h1 className="header__title">Hello World</h1></a>
         <nav className="header__nav" aria-label="Primary">
           {navLinks.map((link) => (
             <a key={link.href} className="header__link" href={link.href}>
