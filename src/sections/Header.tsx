@@ -1,8 +1,22 @@
 import { useEffect, useState } from "react";
 import "../styles/Header.css"
-import { navLinks, contactLink } from "../data/NavData"
+import { navLinks } from "../data/NavData"
+import BackgroundPicker from "../components/BackgroundPicker"
+import type { BackgroundOption } from "../data/BackgroundData"
 
-const Header = () => {
+interface HeaderProps {
+  backgroundOptions: BackgroundOption[];
+  selectedBackgroundId: string;
+  onSelectBackground: (id: string) => void;
+  reduceMotion: boolean;
+}
+
+const Header = ({
+  backgroundOptions,
+  selectedBackgroundId,
+  onSelectBackground,
+  reduceMotion,
+}: HeaderProps) => {
   const [menuOpen, setMenuOpen] = useState(false);
 
   useEffect(() => {
@@ -28,14 +42,21 @@ const Header = () => {
         <a href="#hero"><h1 className="header__title">Hello World</h1></a>
         <nav className="header__nav" aria-label="Primary">
           {navLinks.map((link) => (
-            <a key={link.href} className="header__link" href={link.href}>
+            <a
+              key={link.href}
+              className={link.special ? "header__link--special" : "header__link"}
+              href={link.href}
+            >
               {link.label}
             </a>
           ))}
         </nav>
-        <nav className="header__contact" aria-label="Contact">
-          <a className="header__link--special" href={contactLink.href}>{contactLink.label}</a>
-        </nav>
+        <BackgroundPicker
+          options={backgroundOptions}
+          selectedId={selectedBackgroundId}
+          onSelect={onSelectBackground}
+          reduceMotion={reduceMotion}
+        />
         <button
           type="button"
           className={`header__menu-toggle${menuOpen ? " header__menu-toggle--open" : ""}`}
@@ -65,7 +86,7 @@ const Header = () => {
           {navLinks.map((link) => (
             <a
               key={link.href}
-              className="header__drawer-link"
+              className={link.special ? "header__link--special header__drawer-cta" : "header__drawer-link"}
               href={link.href}
               onClick={() => setMenuOpen(false)}
               tabIndex={menuOpen ? 0 : -1}
@@ -73,14 +94,6 @@ const Header = () => {
               {link.label}
             </a>
           ))}
-          <a
-            className="header__link--special header__drawer-cta"
-            href={contactLink.href}
-            onClick={() => setMenuOpen(false)}
-            tabIndex={menuOpen ? 0 : -1}
-          >
-            {contactLink.label}
-          </a>
         </nav>
       </aside>
     </header>
